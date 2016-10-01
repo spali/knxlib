@@ -1,0 +1,10 @@
+spec
+.git
+node_modules/
+*.log
+*.tgz
+gulpfile.ts
+tsconfig.json
+tslint.json
+typings/
+tools/

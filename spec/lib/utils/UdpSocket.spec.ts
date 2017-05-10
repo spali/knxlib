@@ -7,10 +7,6 @@ interface UdpSocketTestConfig extends UdpSocketConfig {
   name: string;
 }
 
-// TODO:
-// - test returned observable of send()
-// - test error on send
-//
 describe('UdpSocket', function() {
 
   it('initialize with multicast address(es)', function() {
@@ -51,7 +47,7 @@ describe('UdpSocket', function() {
       name: 'multicast  - multiple networks',
       localAddress: '0.0.0.0',
       localPort: null,
-      multicastAddress: ['224.0.0.1', '224.0.0.114']
+      multicastAddress: ['224.0.0.0', '224.0.0.114']
     }
   ];
 
@@ -152,6 +148,9 @@ describe('UdpSocket', function() {
           expect(socket1.getPort()).to.be.equal(setting.localPort, 'as defined');
         }
       });
+
+      it('test returned observable of UdpSocket.send()');
+      it('test error on UdpSocket.send()');
 
       it('communication1', function(done) {
         var socket2: UdpSocket;

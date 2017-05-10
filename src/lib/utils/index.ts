@@ -4,6 +4,7 @@ export * from './AbstractConnection';
 export * from './IPHelper';
 export * from './IndividualAddress';
 export * from './GroupAddress';
-export * from './KnxProtocol';
 export * from './KnxConstants';
 export * from './CEMIConstants';
+export * from './frame/Frame';
+export * from './frame/Frames';

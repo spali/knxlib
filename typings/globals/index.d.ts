@@ -1,4 +1,5 @@
 declare interface Class<T> {
+  prototype: T;
   new (...args: any[]): T;
 }
 

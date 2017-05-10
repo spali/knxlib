@@ -86,7 +86,6 @@ export class UdpSocket extends AbstractConnection<SocketMessage> {
   /**
    * send a message.
    * returns the observable for receiving messages.
-   * NOTE: for connecting on send, a subscription is required.
    * @param  {Buffer}                    msg     [description]
    * @param  {string}                    address [description]
    * @param  {number}                    port    [description]
@@ -169,14 +168,22 @@ export class UdpSocket extends AbstractConnection<SocketMessage> {
    * dedicated method for simpler testing.
    */
   private addMulticastMembership(multicastAddress: string, multicastInterface?: string): void {
-    this.socket.addMembership(multicastAddress, multicastInterface);
+    try {
+      this.socket.addMembership(multicastAddress, multicastInterface);
+    } catch (error) {
+      throw new Error('adding multicast membership (' + multicastAddress + ' on ' + multicastInterface + ') failed with: ' + error);
+    }
   }
 
   /**
    * dedicated method for simpler testing.
    */
   private dropMulticastMembership(multicastAddress: string, multicastInterface?: string): void {
-    this.socket.dropMembership(multicastAddress, multicastInterface);
+    try {
+      this.socket.dropMembership(multicastAddress, multicastInterface);
+    } catch (error) {
+      throw new Error('dropping multicast membership (' + multicastAddress + ' on ' + multicastInterface + ') failed with: ' + error);
+    }
   }
 
 }

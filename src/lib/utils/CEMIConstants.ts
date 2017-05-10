@@ -1,21 +1,21 @@
 export enum DataLinkLayer {
   // FROM NETWORK LAYER TO DATA LINK LAYER
-  'L_Raw.req' = 0x10,
+  L_Raw_req = 0x10, // L_Raw.req
   /** Data Service. Primitive used for transmitting a data frame **/
-  'L_Data.req' = 0x11,
+  L_Data_req = 0x11, // L_Data.req
   /** Poll Data Service **/
-  'L_Poll_Data.req' = 0x13,
+  L_Poll_Data_req = 0x13, // L_Poll_Data.req
   // FROM DATA LINK LAYER TO NETWORK LAYER
   /** Poll Data Service **/
-  'L_Poll_Data.con' = 0x25,
+  L_Poll_Data_con = 0x25, // L_Poll_Data.con
   /** Data Service. Primitive used for receiving a data frame **/
-  'L_Data.ind' = 0x29,
+  L_Data_ind = 0x29, // L_Data.ind
   /** Bus Monitor Service **/
-  'L_Busmon.ind' = 0x2B,
-  'L_Raw.ind' = 0x2D,
+  L_Busmon_ind = 0x2B, // L_Busmon.ind
+  L_Raw_ind = 0x2D, // L_Raw.ind
   /** Data Service. Primitive used for local confirmation that a frame was sent (does not indicate a successful receive though) **/
-  'L_Data.con' = 0x2E,
-  'L_Raw.con' = 0x2F,
+  L_Data_con = 0x2E, // L_Data.con
+  L_Raw_con = 0x2F, // L_Raw.con
 }
 
 export enum FrameType {

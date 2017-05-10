@@ -8,6 +8,9 @@ import {
   KNXNETIP_PORT,
   KNXNETIP_MULTICAST_ADDRESS,
   ErrorCodes,
+  ServiceType,
+} from '../lib/utils';
+import {
   KnxProtocol,
   Frame,
   SearchResponse,
@@ -15,9 +18,8 @@ import {
   DisconnectRequest,
   DisconnectResponse,
   ConnectionStateResponse,
-  TunnelingRequest,
-  ServiceType,
-} from '../lib/utils';
+  TunnelingRequest
+} from '../lib/utils/KnxProtocol';
 
 export interface IKnxConnectionOptions {
   /** local address to listen. if not specified, tries to listen on all addresses. */

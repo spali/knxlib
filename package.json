@@ -68,9 +68,11 @@
   "devDependencies": {
     "@types/chai": "~3.5.1",
     "@types/core-js": "~0.9.41",
+    "@types/deep-extend": "~0.4.30",
     "@types/mocha": "~2.2.40",
     "@types/node": "~6.0.68",
     "@types/pino": "~3.0.1",
+    "@types/reflect-metadata": "~0.0.5",
     "@types/sinon": "~2.1.2",
     "@types/sinon-chai": "~2.7.27",
     "chai": "~3.5.0",
@@ -90,8 +92,10 @@
     "binary-parser": "~1.1.5",
     "binary-protocol": "~0.0.0",
     "core-js": "~2.4.1",
+    "deep-extend": "~0.4.2",
     "inet": "~0.0.3",
     "pino": "~4.2.4",
+    "reflect-metadata": "~0.1.10",
     "rxjs": "~5.3.1"
   }
 }
